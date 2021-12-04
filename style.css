@@ -1,0 +1,18 @@
+
+.done {
+  text-decoration: line-through;
+}
+
+ul{ /*tidying format*/
+  padding-left:10px;
+  line-height: 30px;
+}
+li{
+  max-width: fit-content; /*limits "hit box" of click event*/
+  margin-left:90px;
+}
+
+ul button{ /*aligns buttons with corresponding list items, dispite being the subsequent element in <ul>*/
+  position: absolute;
+  transform: translateY(-25.5px);
+}
