@@ -70,6 +70,7 @@ input.addEventListener("keypress", addListAfterKeypress);
 for (i = 0; i < li.length; i++){ //provides toggle and delete functionalities to each pre-existing list item
 	li[i].addEventListener("click", listToggler);
 	createDeleteButton(i);
+	createDoneButton(i);
 }
 
 
