@@ -13,6 +13,7 @@ function createListElement() {
 	ul.appendChild(li);
 	li.addEventListener("click", listToggler); //Updates new list element with toggler code below
 	createDeleteButton(ul.length); //Adds new delete button corresponding to new list element
+	createDoneButton(ul.length);
 	input.value = "";
 }
 
@@ -53,7 +54,7 @@ function createDoneButton(locationIndex){//For delete button functionality
 	//Attach event handler for delete function
 	newDoneButton.addEventListener("click",listToggler)
 	//insert node after li tag
-	ul.insertAfter(newDoneButton,li[locationIndex+1]);
+	ul.insertBefore(newDoneButton,li[locationIndex+2]);
 }
 
 function deleteLi(event){ //Deletes associated text node and itself
