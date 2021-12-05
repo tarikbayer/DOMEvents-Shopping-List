@@ -44,6 +44,18 @@ function createDeleteButton(locationIndex){//For delete button functionality
 	ul.insertBefore(newDeleteButton,li[locationIndex+1]);
 }
 
+function createDoneButton(locationIndex){//For delete button functionality
+	//Create new element w/ createElement
+	var newDoneButton = document.createElement("button");
+	//Add relevent attributes
+	var newDonButtonText = document.createTextNode("Done");
+	newDoneButton.appendChild(newDonButtonText);
+	//Attach event handler for delete function
+	newDoneButton.addEventListener("click",listToggler)
+	//insert node after li tag
+	ul.insertBefore(newDoneButton,li[locationIndex+1]);
+}
+
 function deleteLi(event){ //Deletes associated text node and itself
 	this.previousElementSibling.remove();
 	this.remove();
