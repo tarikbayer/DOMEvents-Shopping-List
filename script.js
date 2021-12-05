@@ -47,15 +47,16 @@ function listToggler(){ //For toggling listed items on/off
 
 function createDoneButton(locationIndex){//For delete button functionality
 	//Create new element w/ createElement
+	console.log("done ulan");
 	var newDoneButton = document.createElement("button");
 	//Add relevent attributes
 	var newDonButtonText = document.createTextNode("Done");
 	newDoneButton.appendChild(newDonButtonText);
 	//Attach event handler for delete function
-	newDoneButton.addEventListener("click",deleteLi);
+	newDoneButton.addEventListener("click",listToggler);
 	//insert node after li tag
 	ul.insertBefore(newDoneButton,li[locationIndex+1]);
-	console.log("done ulan");
+	
 }
 
 function deleteLi(event){ //Deletes associated text node and itself
