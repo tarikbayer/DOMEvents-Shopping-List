@@ -54,7 +54,7 @@ function createDoneButton(locationIndex){//For delete button functionality
 	//Attach event handler for delete function
 	newDoneButton.addEventListener("click",deleteLi);
 	//insert node after li tag
-	ul.insertBefore(newDoneButton,li[locationIndex+2]);
+	ul.insertBefore(newDoneButton,li[locationIndex+1]);
 	console.log("done ulan");
 }
 
