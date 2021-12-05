@@ -33,7 +33,7 @@ function listToggler(){ //For toggling listed items on/off
 	this.classList.toggle("done");
 }
 
-function createDeleteButton(locationIndex){//For delete button functionality
+/*function createDeleteButton(locationIndex){//For delete button functionality
 	//Create new element w/ createElement
 	var newDeleteButton = document.createElement("button");
 	//Add relevent attributes
@@ -43,7 +43,7 @@ function createDeleteButton(locationIndex){//For delete button functionality
 	newDeleteButton.addEventListener("click",deleteLi)
 	//insert node after li tag
 	ul.insertBefore(newDeleteButton,li[locationIndex+1]);
-}
+}*/
 
 function createDoneButton(locationIndex){//For delete button functionality
 	//Create new element w/ createElement
