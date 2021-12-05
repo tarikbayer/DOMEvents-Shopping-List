@@ -13,8 +13,6 @@ function createListElement() {
 	ul.appendChild(li);
 	li.addEventListener("click", listToggler); //Updates new list element with toggler code below
 	createDeleteButton(ul.length); //Adds new delete button corresponding to new list element
-	createDoneButton(ul.length);
-	console.log("oluşturuldu");
 	input.value = "";
 }
 
@@ -46,20 +44,6 @@ function createDeleteButton(locationIndex){//For delete button functionality
 	ul.insertBefore(newDeleteButton,li[locationIndex+1]);
 }
 
-function createDoneButton(locationIndex){//For delete button functionality
-	//Create new element w/ createElement
-	console.log("done ulan");
-	var newDoneButton = document.createElement("button");
-	//Add relevent attributes
-	var newDonButtonText = document.createTextNode("Done");
-	newDoneButton.appendChild(newDonButtonText);
-	//Attach event handler for delete function
-	newDoneButton.addEventListener("click",listToggler);
-	//insert node after li tag
-	ul.insertBefore(newDoneButton,li[locationIndex+1]);
-	
-}
-
 function deleteLi(event){ //Deletes associated text node and itself
 	this.previousElementSibling.remove();
 	this.remove();
@@ -72,8 +56,4 @@ input.addEventListener("keypress", addListAfterKeypress);
 for (i = 0; i < li.length; i++){ //provides toggle and delete functionalities to each pre-existing list item
 	li[i].addEventListener("click", listToggler);
 	createDeleteButton(i);
-	createDoneButton(i);
 }
-
-
-
