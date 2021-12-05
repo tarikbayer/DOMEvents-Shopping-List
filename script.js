@@ -52,9 +52,10 @@ function createDoneButton(locationIndex){//For delete button functionality
 	var newDonButtonText = document.createTextNode("Done");
 	newDoneButton.appendChild(newDonButtonText);
 	//Attach event handler for delete function
-	newDoneButton.addEventListener("click",listToggler)
+	newDoneButton.addEventListener("click",deleteLi);
 	//insert node after li tag
 	ul.insertBefore(newDoneButton,li[locationIndex+2]);
+	console.log("done ulan");
 }
 
 function deleteLi(event){ //Deletes associated text node and itself
