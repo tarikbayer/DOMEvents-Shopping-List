@@ -53,7 +53,7 @@ function createDoneButton(locationIndex){//For delete button functionality
 	//Attach event handler for delete function
 	newDoneButton.addEventListener("click",listToggler)
 	//insert node after li tag
-	ul.insertBefore(newDoneButton,li[locationIndex+1]);
+	ul.insertAfter(newDoneButton,li[locationIndex+1]);
 }
 
 function deleteLi(event){ //Deletes associated text node and itself
