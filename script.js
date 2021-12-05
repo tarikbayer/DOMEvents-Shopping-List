@@ -14,6 +14,7 @@ function createListElement() {
 	li.addEventListener("click", listToggler); //Updates new list element with toggler code below
 	createDeleteButton(ul.length); //Adds new delete button corresponding to new list element
 	createDoneButton(ul.length);
+	console.log("oluşturuldu");
 	input.value = "";
 }
 
